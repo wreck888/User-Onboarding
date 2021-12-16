@@ -1,15 +1,10 @@
 import React from 'react'; 
 
- 
- 
 
 export default function userForm (props) { 
     const { 
         values, submit, change, disabled, errors, 
     } = props 
-
- 
- 
 
     const onSubmit = event => { 
         event.preventDefault() 
@@ -17,18 +12,12 @@ export default function userForm (props) {
 
     } 
 
- 
- 
-
     const onChange = event => { 
         const { name, value, checked, type } = event.target 
         const valueCheck = type === 'checkbox' ? checked : value;  
         change(name, valueCheck) 
 
     } 
-
- 
- 
 
     return ( 
         <form onSubmit={onSubmit}> 

@@ -71,10 +71,10 @@ function App() {
 
   const formSubmit = () => {
     const newUser = {
-      username: formValues.first_name,
-      userlast: formValues.last_name,
-      email: formValues.email,
-      password: formValues.password,
+      first_name: formValues.username.trim(),
+      last_name: formValues.userlast.trim(),
+      email: formValues.email.trim(),
+      password: formValues.password.trim(),
       // terms: !!formValues
     }
     postNewUser(newUser)
