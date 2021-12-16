@@ -26,6 +26,7 @@ const StyledDiv = styled.div`
     margin: 16px;
     padding: 16px 8px 12px 16px;
     background-color: #f3f3f3;
+    color: red;
     
 `
 
@@ -46,6 +47,7 @@ const initialFormValues = {
   userlast: '',
   email: '', 
   password: '', 
+  position: '',
   terms: false,   
 } 
 
@@ -57,6 +59,7 @@ const initialFormErrors = {
   userlast: '',
   email: '', 
   password: '', 
+  position: '',
 } 
 
 const initialUsers = [] 
@@ -107,6 +110,7 @@ function App() {
       last_name: formValues.userlast.trim(),
       email: formValues.email.trim(),
       password: formValues.password.trim(),
+      position: formValues.position,
       // terms: !!formValues
     }
     postNewUser(newUser)

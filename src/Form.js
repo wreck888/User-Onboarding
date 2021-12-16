@@ -68,6 +68,16 @@ export default function userForm (props) {
                         type = 'text' 
                     /> 
                 </label> <br/>
+                <label>Position:&nbsp;
+                    <select value = {values.position}
+                    name = "position" onChange={onChange}>
+                         <option value="">-- Select a Position --</option>
+                        <option value="Student">Student</option>
+                        <option value="Instructor">Instructor</option>
+                        <option value="Alumni">Alumni</option>
+                        <option value="Guardian">Guardian</option>
+                    </select>
+                </label> <br/>
                 <label> 
                     Terms of Service 
                     <input 
@@ -75,8 +85,7 @@ export default function userForm (props) {
                         onChange = {onChange} 
                         name = 'terms' 
                         type = 'checkbox' 
-                        
-                    /> 
+                    />
                 </label>                
             </StyledLabel> 
             <div> 

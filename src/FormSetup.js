@@ -8,6 +8,7 @@ function FormSetup({ details }) {
       <h2>{details.last_name}</h2>
       <p>Email: {details.email}</p>
       <p>password: {details.password}</p>
+      <p>Position: {details.position} </p>
       </div>
   )
 }
