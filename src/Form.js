@@ -89,7 +89,7 @@ export default function userForm (props) {
                 </label>                
             </StyledLabel> 
             <div> 
-                <button disabled={disabled}>Submit</button> 
+                <button id = 'submitB' disabled={disabled}>Submit</button> 
                 <p>{errors.username}</p> 
                 <p>{errors.userlast}</p>
                 <p>{errors.email}</p> 
