@@ -6,8 +6,40 @@ import axios from 'axios';
 import formSchema from './validation/FormSchema'; 
 import * as yup from 'yup'; 
 import FormSetup from './FormSetup';
- 
- 
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+    text-align: center;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+    border-radius: 8px;
+    margin: 16px;
+    padding: 16px 8px 12px 16px;
+    background-color: #2D82B7;
+    
+`
+const StyledDiv = styled.div`
+    text-align: center;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0px 1px 6px -2px rgb(128, 127, 127);
+    border-radius: 8px;
+    margin: 16px;
+    padding: 16px 8px 12px 16px;
+    background-color: #f3f3f3;
+    
+`
+
+const StyledH1 = styled.h1`
+
+margin: 16px;
+padding: 16px 8px 12px 16px;
+color: #2D82B7;
+font-size: 4rem;
+`
+const StyledDiv2 = styled.div`
+color: #2D82B7;
+`
+
 
 const initialFormValues = { 
   username: '', 
@@ -93,8 +125,9 @@ function App() {
     <div className="App"> 
       <header className="App-header"> 
        <div> 
-         <h1>Come Onboard!</h1> 
+         <StyledH1>Come Onboard!</StyledH1> 
        </div> 
+       <StyledDiv>
         <Form 
           values = {formValues} 
           change = {inputChange} 
@@ -102,6 +135,8 @@ function App() {
           disabled = {disabled} 
           errors = {formErrors} 
         /> 
+        </StyledDiv>
+        <StyledDiv2>
         {
           users.map( (users, id) => {
             return (
@@ -109,6 +144,7 @@ function App() {
             )
           })
         }
+        </StyledDiv2>
       </header> 
     </div> 
 

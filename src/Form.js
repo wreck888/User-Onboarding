@@ -1,5 +1,13 @@
 import React from 'react'; 
+import styled from 'styled-components';
 
+
+const StyledH2 = styled.h2`
+color: #2D82B7;
+`
+const StyledLabel = styled.div`
+color: #2D82B7;
+`
 
 export default function userForm (props) { 
     const { 
@@ -22,44 +30,44 @@ export default function userForm (props) {
     return ( 
         <form onSubmit={onSubmit}> 
          <div> 
-            <h2>New User Information Form</h2> 
-            <div> 
+            <StyledH2>New User Information Form</StyledH2> 
+            <StyledLabel> 
                 <label> 
-                   First Name: 
+                   First Name:&nbsp;  
                     <input 
                         value = {values.first_name} 
                         onChange = {onChange} 
                         name = 'username' 
                         type = 'text' 
                     />                                    
-                </label> 
+                </label><br/> 
                 <label> 
-                   Last Name: 
+                   Last Name:&nbsp;  
                     <input 
                         value = {values.last_name} 
                         onChange = {onChange} 
                         name = 'userlast' 
                         type = 'text' 
                     />                                    
-                </label> 
+                </label> <br/> 
                 <label> 
-                    Email: 
+                    Email:&nbsp; 
                     <input 
                         value = {values.email} 
                         onChange = {onChange} 
                         name = 'email' 
                         type = 'email' 
-                    /> 
-                </label> 
+                    />&nbsp; 
+                </label>
                 <label> 
-                    Password: 
+                    Password:&nbsp;  
                     <input 
                         value = {values.password} 
                         onChange = {onChange} 
                         name = 'password' 
                         type = 'text' 
                     /> 
-                </label> 
+                </label> <br/>
                 <label> 
                     Terms of Service 
                     <input 
@@ -67,9 +75,10 @@ export default function userForm (props) {
                         onChange = {onChange} 
                         name = 'terms' 
                         type = 'checkbox' 
+                        
                     /> 
                 </label>                
-            </div> 
+            </StyledLabel> 
             <div> 
                 <button disabled={disabled}>Submit</button> 
                 <p>{errors.username}</p> 
